@@ -48,5 +48,4 @@ Thumbs.db
 #carpetas node_modules
 node_modules
 package-lock.json
-HDI/node_modules
-HDI/package-lock.json
+Config 
