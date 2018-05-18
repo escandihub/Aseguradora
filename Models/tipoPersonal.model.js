@@ -2,7 +2,8 @@ const mongoose = require('mongoose'),
       Schema = mongoose.Schema;
 
 var tipoPersonalSchema = new Schema({
-    Tipo: {Personal: String}
+    _id: {type: String},
+    Tipo: {Personal: String},
 });
 
 
