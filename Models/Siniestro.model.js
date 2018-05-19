@@ -2,8 +2,9 @@ const mongoose = require('mongoose'),
       Schema = mongoose.Schema;
 
 var SinestroSchema = new Schema({
-    Tipo: {},
-    Perdidad: {},
+    Siniestro: {type: String },
+    Dato: {type: String},
+    resuelto: {type: Boolean}
 
 })
 

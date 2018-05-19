@@ -1,4 +1,5 @@
 const mongoose = require('mongoose'),
+      bcrypt = require('bcrypt-nodejs'),
       Schema = mongoose.Schema;
 
 
@@ -10,7 +11,7 @@ var PersonalShema = new Schema({
     NSS: {type: Number, require: true},
     Domicilio: {type: String, require: true},
     Correo: {type: String, require: true},
-    Password: {type: String, require: true, min: 8},
+    Password: {type: String, require: true},
     Tipo: { type: String}
     //Rol: { type: String, enum: ['Administrador', 'Agente', 'Atencion a Cliente']}
     //Tipo: {type: Schema.Types.ObjectId, ref: 'tipoPersonal.model'}

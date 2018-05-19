@@ -1,5 +1,6 @@
 const passport = require('passport'),
       LocalStrategy = require('passport-local').Strategy,
+
       Personal = require('../Models/Personal.model');
 
 
@@ -8,8 +9,7 @@ const passport = require('passport'),
       });
 
       passport.deserializeUser(function(id, done) {
-        Usuario.findById(id, function (err, user) {
-//            if(use.Rol == "Administrador"){console.log('Soy supervisor');}
+        Personal.findById(id, function (err, user) {
           done(err, user);
         });
       });
@@ -17,8 +17,8 @@ const passport = require('passport'),
 
       passport.use(new LocalStrategy(
           {
-          usernameField: 'Correo',
-          passwordField: 'Password'
+          usernameField: 'correo',
+          passwordField: 'password'
         },
           (Correo, password, done) => {
             Personal.findOne({Correo: Correo}, (err, usuario) => {                

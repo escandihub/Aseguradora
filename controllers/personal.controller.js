@@ -21,20 +21,15 @@ const passport = require('passport'),
       });
       // verificacion si no existe uno previamente
 
-      PersonalShema.findOne({Correo: req.body.correo}, (err, correoExiste) =>{
-          if(correoExiste){ return res.status(400).send('Ya  registrado');}
+      PersonalShema.findOne({Correo: req.body.correo}, (err, correoExiste) =>{    
+          if(correoExiste) return res.status(400).send('Ya  registrado');
 
-          newPersonal.save((err) => {
-              if(err){ 
-                 // next(err);
-                } //OK
-              req.logIn(newPersonal, (err) => {
-                  if(err){next(err);}
-                  res.send('Usuario creado'); //render to
-              });
+          newPersonal.save((err, guardado) => {
+              if(err) res.send({msg: 'no mames un error: '+  err});
+              res.send(guardado);
+             
           });
       });
-
     };
 
     exports.Login = (req, res, next) => {

@@ -7,6 +7,7 @@ const express = require('express'),
       config = require('./Config/database');
 
 var app = express();
+//var appPersonal = express();
 /**
  * Base de datos
  */
@@ -59,7 +60,7 @@ app.get('/', (req,res) => {
 
 
 
-require('./routes/newUsuario.route')(app);
+//require('./routes/newUsuario.route')(app);
 require('./routes/personal.login.route')(app);
 
 

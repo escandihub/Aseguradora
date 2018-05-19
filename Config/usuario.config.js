@@ -8,8 +8,7 @@ const passport = require('passport'),
       });
 
       passport.deserializeUser(function(id, done) {
-        Usuario.findById(id, function (err, user) {
-        
+        Usuario.findById(id, function (err, user) {        
           done(err, user);
           
         });
