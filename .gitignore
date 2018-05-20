@@ -47,5 +47,4 @@ Thumbs.db
 
 #carpetas node_modules
 node_modules
-package-lock.json 
-Config/database.js
+package-lock.json
