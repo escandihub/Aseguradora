@@ -1,9 +1,11 @@
 module.exports = (app) => {
     const personal = require('../controllers/personal.controller'),
+          personalOperaciones = require('../controllers/persona.registros.controller'),
           Config = require('../Config/Personal.config'),
           side = require('../controllers/personal.tipo.controller');
 
-          app.post('/personal/registro', personal.create);
+          app.post('/personal/registro', Config.estaAutenticado, side.isAdministrador, personalOperaciones.create);
+          app.post('/personal/paquete', Config.estaAutenticado, side.isAgente, personalOperaciones.paquete);
 
           app.post('/personal/login', personal.Login);
 

@@ -53,9 +53,10 @@ mongoose.connect(config.MONGO_URI)
  * express.static es una función de middleware integrada para servir archivos estáticos.
  * Estamos diciendo que la carpeta pública del servidor express es el lugar para buscar los archivos estáticos
  */
+
 app.use(express.static('public'));
 app.set("view engine", "jade");
-app.get('/Personal', (req,res) => {
+app.get('/personal', (req,res) => {
    //res.send('hola ');
    res.render('login');
    console.log(req.body.password);
@@ -65,7 +66,7 @@ app.get('/', (req, res) => {
 })
 
 
-//require('./routes/newUsuario.route')(app);
+//require('./routes/usuario.route')(app);
 require('./routes/personal.login.route')(app);
 
 

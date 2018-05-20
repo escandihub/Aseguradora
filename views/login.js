@@ -2,20 +2,12 @@
 $('.message a').click(function(){
     $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
  });  */
- $(document).ready(function() {
 
- $.ajax({
-    type: 'POST',
-    data: JSON.stringify(data),
-    contentType: 'application/json',
-    url: 'http://localhost:3000/personal/login',						
-    success: function(data) {
-        console.log('success');
-        console.log(JSON.stringify(data));
-    }
-});
-this.document.alert('hey bitch')
- }); 
+window.onload = function(){
+    var http = XMLHttpRequest();
 
- var jsonObject = JSON.parse(msg);
- 
+    $.ajax({
+        type: "GET",
+        url: 'http://localhost:8080//personal/login'
+    })
+}
