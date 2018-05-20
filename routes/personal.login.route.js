@@ -10,10 +10,8 @@ module.exports = (app) => {
           app.get('/personal/logout', Config.estaAutenticado,  personal.Logout);
 
           app.get('/personal/inicio', Config.estaAutenticado, (req, res) => {
-                res.json(req.user);
-                /*
-                if(req.user.Tipo == 'Administrador'){console.log('soy admin');}
-                if(req.user.Tipo == 'Agente') {console.log('soy agente');}  */
+                //res.json(req.user);
+                res.render('dashboard', {usuario: req.user.Tipo});
             })
         app.get('/personal/siniesto', Config.estaAutenticado, side.isAgente, (req, res) =>{
             res.send({msg: 'esto solo un agente puede acceder'})

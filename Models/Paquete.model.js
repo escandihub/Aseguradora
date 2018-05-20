@@ -5,16 +5,14 @@ const mongoose = require('mongoose'),
 
 var SeguroSchema = new Schema({
 
-    Tipo_Seguro:[ 'vida', 'Auto', 'Casa' ],
-    Fecha:{
-        type: Date,
-        required: true
-    },
+    Tipo:[ 'vida', 'Auto', 'Casa' ],
+    Cobertura: {type: String},
+    Vigencia:{type: Date, required: true },
     Costo: {
-        type: int,
+        type: Number,
         required: true
     },
-    Cliente: {type: Schema.Types.ObjectId, ref: 'Usuario.model'}
+    //Cliente: {type: Schema.Types.ObjectId, ref: 'Usuario.model'}
 });
 
 module.exports = mongoose.model('Seguro', SeguroSchema);

@@ -6,7 +6,7 @@ var ReclamoSchema = new Schema({
     Cliente: {type: Schema.Types.ObjectId, ref: 'Usuario.model' },
     Queja: {type: String},
     Atendida: {
-        Agente: {type: Schema.Types.ObjectId, ref: 'tipoPersonal'},
+        Agente: {type: Schema.Types.ObjectId, ref: 'Personal.model'},
         Ok: {type: Boolean}
     }
 });

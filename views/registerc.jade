@@ -1,0 +1,47 @@
+script
+    include ./vendor/jquery/jquery.min.js    
+    include registrarc.js       
+link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', rel='stylesheet')
+
+.container
+.login-page    
+    .form
+        img.img-responsive#login(src="/img/register/registerc.png")        
+        form.register-form         
+            #izquierda
+                input(type='text', placeholder='nombre',pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ ]*$", required) 
+                //^[a-zA-Z ]*$
+                span
+                input(type='text', placeholder='apellido paterno', pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ ]*$", id="mayus")
+                span
+                input(type='text', placeholder='apellido materno' pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ ]*$")
+                span
+                input(type='number', placeholder='edad', pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ ]*$",min="18",max="60")
+                span
+                input(type='tel', placeholder='teléfono xxx-xxx-xxxx',pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}",maxlength="12" )                
+                span
+                input(type='text', placeholder='estado',pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ ]*$")
+                span
+                input(type='text', placeholder='domicilio',pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ ]*$")
+                span
+            #derecha                                
+                input(type='text', placeholder='colonia',pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ ]*$" )
+                span
+                input(type='number', placeholder='Número ext', required)
+                span
+                input(type='number', placeholder='Número int')
+                span
+                input(type='text', placeholder='CP', id="CP", pattern="[0-9]",maxlength="5")
+                span
+                input(type='email', placeholder='Correo electronico', pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$", )
+                span
+                input(type='password', placeholder='password', pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$", id="password")                   
+                span
+            button Register            
+style
+    include registerc.css
+    
+    
+
+    
+
