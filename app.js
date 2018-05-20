@@ -33,7 +33,7 @@ mongoose.connect(config.MONGO_URI)
 
 
 
- const port = process.env.PORT || 8084;
+ const port = process.env.PORT || 8080;
 
   /**
    * Software intermedio para bodyparsing usando json y urlencoding
