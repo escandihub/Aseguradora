@@ -56,21 +56,56 @@ mongoose.connect(config.MONGO_URI)
 
 app.use(express.static('public'));
 app.set("view engine", "jade");
-app.get('/personal', (req,res) => {
-   //res.send('hola ');
-   res.render('login');
-   console.log(req.body.password);
+/*
+app.get('/', (req, res) => {
+    res.render('index');
+})
+*/
+
+app.get('/cliente', (req, res) => {
+    res.render('login');
 });
+
+app.get('/personal', (req, res) => {
+    res.render('loginpersonal');
+})
 app.get('/', (req, res) => {
     res.render('index');
 })
 
-
-//require('./routes/usuario.route')(app);
+require('./routes/usuario.route')(app);
 require('./routes/personal.login.route')(app);
 
+/**
+ * Administrador subDominio
+ */
+/*
+Admin.use(session({       
+    secret: 'secret cat',
+    resave: true,
+    saveUninitialized: true
+   }));
 
+Admin.use(bodyParser.json()); //parsear la informacion
+Admin.use(bodyParser.urlencoded({ extended: true }));
+Admin.use(passport.initialize());
+Admin.use(passport.session());
 
+Admin.use(express.static('public'));
+Admin.set("view engine", "jade");
+
+Admin.get('/personal', (req,res) => {
+    //res.send('hola ');
+    res.render('login');
+    console.log(req.body.password);
+ });
+require('./routes/personal.login.route')(Admin);
+const port2 = 8082;
+Admin.listen(port2, () => {
+    console.log('Iniciando en el puerto: ' + port2);    
+});
+*/
 app.listen(port, () => {
     console.log('Iniciando en el puerto: ' + port);    
 });
+

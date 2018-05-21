@@ -50,19 +50,20 @@ exports.create = (req, res) => {
 };
 
 exports.Login = (req, res, next) => {
-    passport.authenticate('local', (err, usuario, info) => {
+    passport.authenticate('user', (err, usuario, info) => {
         console.log(info);        
         if(err){
             next(err);
         }        
         if(!usuario){            
-            return  res.status(400).send({msg: 'correo o contraseña invalida'});
+            return res.status(401).send({success: false, msg: 'correo o contraseña incorrecto'})
         }
         req.logIn(usuario, (err) => {
             if(err){
                 next(err);            
             }
-            res.json( {msg:'login exitoso'});
+            //res.json( {msg:'login exitoso'});
+            res.redirect('inicio');
         })
     })(req, res, next); //invocar el metodo que passport nos proporciona 
     //res.redirect('/inicio');
@@ -71,6 +72,7 @@ exports.Login = (req, res, next) => {
 
 exports.Logout = (req, res) => {
     req.logout();
-    res.json({msg: 'adios vulve pronto'});
+    //res.json({msg: 'adios vulve pronto'});
+    res.redirect('/');
 }
 

@@ -1,0 +1,106 @@
+link#bootstrap-css(href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css', rel='stylesheet')
+
+// ---- Include the above in your HEAD tag --------
+style
+  include dashboard.css
+script
+  include dashboard.js
+
+#throbber(style='display:none; min-height:120px;')
+#noty-holder
+#wrapper
+  // Navigation
+  nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+    // Brand and toggle get grouped for better mobile display
+    .navbar-header
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href='http://cijulenlinea.ucr.ac.cr/dev-users/')
+        img(src='/Chacon/2.png', width="80px")
+    // Top Menu Items
+    ul.nav.navbar-right.top-nav
+      li
+        a(href='#', data-placement='bottom', data-toggle='tooltip', data-original-title='Stats')
+          i.fa.fa-bar-chart-o
+      li.dropdown
+        a.dropdown-toggle(href='#', data-toggle='dropdown')
+          | Admin User 
+          b.fa.fa-angle-down
+        ul.dropdown-menu   
+          li
+            a(href='#')
+              i.fa.fa-fw.fa-cog
+              |  Change Password
+          li.divider
+          li
+            a(href='#')
+              i.fa.fa-fw.fa-power-off
+              |  Logout
+    // Sidebar Menu Items - These collapse to the responsive navigation menu on small screens
+    .collapse.navbar-collapse.navbar-ex1-collapse
+      ul.nav.navbar-nav.side-nav
+        li
+          a(href='#', data-toggle='collapse', data-target='#submenu-1')
+            i.fa.fa-fw.fa-user-plus
+            |  Registro de paquetes
+            i.fa.fa-fw.fa-angle-down.pull-right
+          ul#submenu-1.collapse
+            li
+              a(href='#')
+                i.fa.fa-angle-double-right
+                |  Registrar paquete
+            li
+              a(href='#')
+                i.fa.fa-angle-double-right
+                |  Actualizar datos del paquete
+            li
+              a(href='#')
+                i.fa.fa-angle-double-right
+                |  Eliminar paquete
+        li
+          a(href='#', data-toggle='collapse', data-target='#submenu-2')
+            i.fa.fa-fw.fa-eye
+            |   Ver informes (ventas y pagadas)
+            i.fa.fa-fw.fa-angle-down.pull-right
+          ul#submenu-2.collapse
+            li
+              a(href='#')
+                i.fa.fa-angle-double-right
+                |  Semanal
+            li
+              a(href='#')
+                i.fa.fa-angle-double-right
+                |  Mensual
+            li
+              a(href='#')
+                i.fa.fa-angle-double-right
+                |  Trimestral
+            li
+              a(href='#')
+                i.fa.fa-angle-double-right
+                |  Semestral
+            li
+              a(href='#')
+                i.fa.fa-angle-double-right
+                |  Anual        
+        li
+          a(href='sugerencias')
+            i.fa.fa-fw.fa-eye
+            |  Dar de baja a clientes 
+    // /.navbar-collapse
+  #page-wrapper
+    .container-fluid
+      // Page Heading
+      #main.row
+        #content.col-sm-12.col-md-12.well
+          h1 Bienvenido 
+script(src='//code.jquery.com/jquery-1.11.1.min.js')
+script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js')
+
+      // /.row
+    // /.container-fluid
+  // /#page-wrapper
+// /#wrapper

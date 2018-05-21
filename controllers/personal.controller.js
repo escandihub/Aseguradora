@@ -1,7 +1,7 @@
 const passport = require('passport');     
-
+    
     exports.Login = (req, res, next) => {
-        passport.authenticate('local', (err, usuario, info) => {
+        passport.authenticate('personal', (err, usuario, info) => {
             console.log(info);        
             if(err){
                 next(err);
@@ -17,7 +17,9 @@ const passport = require('passport');
                 }
                 //res.json( {msg:'login exitoso'});
                 //res.render('/inicio', {usuario: req.user.Tipo});
-                res.redirect('inicio');
+               res.redirect('menu');
+               //console.log(req.user);
+               
                 
             })
         })(req, res, next); //invocar el metodo que passport nos proporciona 

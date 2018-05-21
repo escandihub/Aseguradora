@@ -1,0 +1,53 @@
+script
+    include ./vendor/jquery/jquery.min.js    
+    include registrarc.js       
+link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', rel='stylesheet')
+meta(charset='utf-8')
+meta(http-equiv='X-UA-Compatible', content='IE=edge')
+meta(name='viewport', content='width=device-width, initial-scale=1')
+meta(name='description', content='')
+meta(name='author', content='')
+header
+    .header
+     jjs
+.login-page    
+    .form
+        img.img-responsive#login(src="/img/register/registerc.png")        
+        form.register-form(action="/cliente/registrar",method="POST")         
+            #izquierda
+                input(name="nombre", type='text', placeholder='nombre',pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ ]*$", class="may" required) 
+                //^[a-zA-Z ]*$
+                span
+                input(name="apellidopaterno",type='text', placeholder='apellido paterno', pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ ]*$", class="may", required)
+                span
+                input(name="apellidomaterno", type='text', placeholder='apellido materno' pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ ]*$", class="may",required)
+                span
+                input(name="edad", type='number', placeholder='edad',min="18",max="60",required)
+                span
+                input(name="telefono",type='tel', placeholder='teléfono xxx-xxx-xxxx',pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}",maxlength="12",required)                
+                span
+                input(name="estado",type='text', placeholder='estado',pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ ]*$",class="may",required)
+                span
+                input(name="domicilio", type='text', placeholder='domicilio',pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ ]*$",class="may",required)
+                span
+            #derecha                                
+                input(name="colonia",type='text', placeholder='colonia',pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ ]*$",class="may",required)
+                span
+                input(name="numeroext",type='number', placeholder='Número ext',min="1", max="9999" required)
+                span
+                input(name="numeroint",type='number', placeholder='Número int',min="1", max="9999",required)
+                span
+                input(name="cp",type='number', placeholder='CP',min="1000", max="99998",required)
+                span
+                input(name="email",type='email', placeholder='Correo electronico', pattern="(([a-z_]+|[0-9]+)+([¡]|[$]|[.]))+.([@]).([hotmail.com]|[gmail.com]|[outlook.com]|[live.com.mx])+",class="correo",required)
+                span
+                input(name="password"type='password', placeholder='password', pattern="/^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[$@$!%?&])[A-Za-z\d$@$!%?&]{8,15}/;", required)                   
+                span
+            button Register            
+style
+    include registerc.css
+    
+    
+
+    
+

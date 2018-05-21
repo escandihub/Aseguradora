@@ -1,4 +1,5 @@
 var contador=0;
+var con=1;
 $(function(){
   ////// Telefono 
     ////Solo numeros
@@ -13,30 +14,31 @@ $(function(){
       }
     });
   });
-  
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////
 ///Espacios en blanco INICIO Y FINAL
   $("button").click(function(){    
     var value = $("input").val();     
     var value_without_space = $.trim(value);         
-    //alert('El texto que ha ingresado contiene espacios y serán eliminados');    
+    alert('El texto que ha ingresado contiene espacios y serán eliminados');    
     this.val(value_without_space);  
   });
-  $("input").keyup(function(){
-    //var mayusc = $(this).val();      
-    this.value=this.value.toUpperCase();
+  $('.may').keyup(function(){      
+      $(this).val($(this).val().toUpperCase());
+    });
+
+  $('.correo').keyup(function(e){
+    if(e.keyCode==32){      
+      var texto = $(this).val();            
+      this.value=texto.substring(0,texto.length - 1);      
+    }          
   });
   $("input").keyup(function(e){    
     if(e.keyCode==32){
       contador++;
       var texto = $(this).val();      
-      if(contador>1){                
-        //alert(texto.substring(0,texto.length - 1));
+      if(contador>1){                        
         this.value=texto.substring(0,texto.length - 1)        
-    }      
-    }else{contador=0;
-    }    
+      }      
+    }else{contador=0;}    
   });
 
 });

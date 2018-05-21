@@ -11,11 +11,13 @@ module.exports = (app) => {
 
           app.get('/personal/logout', Config.estaAutenticado,  personal.Logout);
 
-          app.get('/personal/inicio', Config.estaAutenticado, (req, res) => {
+          app.get('/personal/menu',  (req, res) => {
                 //res.json(req.user);
-                res.render('dashboard', {usuario: req.user.Tipo});
-            })
-        app.get('/personal/siniesto', Config.estaAutenticado, side.isAgente, (req, res) =>{
+                res.render('dashboardAgente'/*, {usuario: req.user.Tipo}*/);
+                //console.log(req.user);
+                
+            });
+        app.get('/personal/siniestro', Config.estaAutenticado, side.isAgente, (req, res) =>{
             res.send({msg: 'esto solo un agente puede acceder'})
         })
 

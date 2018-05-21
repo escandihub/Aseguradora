@@ -1,21 +1,23 @@
 const passport = require('passport'),
       LocalStrategy = require('passport-local').Strategy,
-
       Personal = require('../Models/Personal.model');
+
+  
 
 
       passport.serializeUser(function(user, done) {
         done(null, user.id);
+        
       });
 
       passport.deserializeUser(function(id, done) {
-        Personal.findById(id, function (err, user) {
+        Personal.findById(id, function (err, user) { //resultado de una consulta
           done(err, user);
         });
       });
 
-
-      passport.use(new LocalStrategy(
+      
+      passport.use('personal', new LocalStrategy(
           {
           usernameField: 'correo',
           passwordField: 'password'
@@ -34,7 +36,8 @@ const passport = require('passport'),
                         }
                     })
                 }
-            })}
+              })//other method
+        } 
       ));
 
 
@@ -42,5 +45,8 @@ const passport = require('passport'),
           if(req.isAuthenticated()){
               return next(); //si si puedes entrar 
           }
-          res.status(401).send('No puedes entrar a esta direccion sorry');
+          res.status(401).send('No puedes entrar a esta direccion sorry personal');
+
+
+          
       }
