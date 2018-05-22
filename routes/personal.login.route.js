@@ -1,22 +1,26 @@
 module.exports = (app) => {
     const personal = require('../controllers/personal.controller'),
-          personalOperaciones = require('../controllers/persona.registros.controller'),
-          Config = require('../Config/Personal.config'),
+          personalOperaciones = require('../controllers/persona.registros.controller')
           side = require('../controllers/personal.tipo.controller');
+          confiPassport = require('../Config/passportConfig');
 
-          app.post('/personal/registro', Config.estaAutenticado, side.isAdministrador, personalOperaciones.create);
-          app.post('/personal/paquete', Config.estaAutenticado, side.isAgente, personalOperaciones.paquete);
+          app.get('/personal', (req, res) => {
+            res.render('loginpersonal');
+            })
+          app.post('/personal/registro', personal.estaAutenticado, side.isAdministrador, personalOperaciones.create);
+          app.post('/personal/paquete', personal.estaAutenticado, side.isAgente, personalOperaciones.paquete);
 
           app.post('/personal/login', personal.Login);
 
-          app.get('/personal/logout', Config.estaAutenticado,  personal.Logout);
+          app.get('/personal/logout', confiPassport.estaAutenticado,  personal.Logout);
 
-          app.get('/personal/menu',  (req, res) => {
+          app.get('/personal/menu', side.isAgente, (req, res) => {
                 //res.json(req.user);
                 res.render('dashboardAgente'/*, {usuario: req.user.Tipo}*/);
                 //console.log(req.user);
                 
             });
+            /*
         app.get('/personal/siniestro', Config.estaAutenticado, side.isAgente, (req, res) =>{
             res.send({msg: 'esto solo un agente puede acceder'})
         })
@@ -28,5 +32,5 @@ module.exports = (app) => {
         app.post('/personal/Registroajustaor', Config.estaAutenticado, side.isATC, (req, res) => {
 
         })
-
+*/
 }

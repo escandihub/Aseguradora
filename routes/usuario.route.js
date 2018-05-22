@@ -1,8 +1,11 @@
     module.exports = (app) => {
         const usuario = require('../controllers/usuario.controller'),
               Operacion = require('../controllers/usuarioOperacion')
-              confiPassport = require('../Config/usuario.config');
+              confiPassport = require('../Config/passportConfig');
 
+    app.get('/cliente', (req, res ) => {
+        res.render('login');
+    })          
     app.post('/cliente/registro', usuario.create);
 
     app.post('/cliente/login', usuario.Login);

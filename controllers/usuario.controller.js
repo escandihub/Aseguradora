@@ -50,7 +50,7 @@ exports.create = (req, res) => {
 };
 
 exports.Login = (req, res, next) => {
-    passport.authenticate('user', (err, usuario, info) => {
+    passport.authenticate('cliente', (err, usuario, info) => {
         console.log(info);        
         if(err){
             next(err);

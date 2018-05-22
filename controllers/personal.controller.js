@@ -1,17 +1,17 @@
 const passport = require('passport');     
     
     exports.Login = (req, res, next) => {
-        passport.authenticate('personal', (err, usuario, info) => {
+        passport.authenticate('personal', (err, personal, info) => {
             console.log(info);        
             if(err){
                 next(err);
             }        
-            if(!usuario){            //poner resultado mediante ajax
+            if(!personal){            //poner resultado mediante ajax
                 //return  res.status(400).send({msg: 'correo o contraseña invalida'});
                 //res.status(401).send({success: false, msg: 'Authentication failed. Wrong password.'});
                 return res.status(401).send({success: false, msg: 'correo o contraseña incorrecto'})
             }
-            req.logIn(usuario, (err) => {
+            req.logIn(personal, (err) => {
                 if(err){
                     next(err);            
                 }
@@ -32,3 +32,5 @@ const passport = require('passport');
         //res.json({msg: 'adios vulve pronto'});
         res.redirect('/');
     }
+
+    

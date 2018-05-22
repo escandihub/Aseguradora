@@ -51,7 +51,7 @@ var UsuarioShema = new Schema({
         }, 
     Correo: { type: String, required: true },
     Password: { type: String, required: true, min:8, max: 16 },
-    status: { type: Boolean},
+    Status: { type: Boolean},
     
     //timetamps: true detalles de cuando fue creado y editado el usuario
 }/*detalle timestamps*/);

@@ -61,14 +61,15 @@ app.get('/', (req, res) => {
     res.render('index');
 })
 */
-
+/*
 app.get('/cliente', (req, res) => {
     res.render('login');
-});
+}); 
 
 app.get('/personal', (req, res) => {
     res.render('loginpersonal');
 })
+*/
 app.get('/', (req, res) => {
     res.render('index');
 })
