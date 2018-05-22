@@ -56,20 +56,7 @@ mongoose.connect(config.MONGO_URI)
 
 app.use(express.static('public'));
 app.set("view engine", "jade");
-/*
-app.get('/', (req, res) => {
-    res.render('index');
-})
-*/
-/*
-app.get('/cliente', (req, res) => {
-    res.render('login');
-}); 
 
-app.get('/personal', (req, res) => {
-    res.render('loginpersonal');
-})
-*/
 app.get('/', (req, res) => {
     res.render('index');
 })

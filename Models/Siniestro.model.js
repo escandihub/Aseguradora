@@ -4,8 +4,8 @@ const mongoose = require('mongoose'),
 var SinestroSchema = new Schema({
     Agente: { type: Schema.Types.ObjectId, ref: 'Personal.model' },
     Siniestro: {type: String },
-    Dato: {type: String},
-    resuelto: {type: Boolean}
+    Dato: {type: String, required: true},
+    Resuelto: {type: Boolean}
 
 })
 

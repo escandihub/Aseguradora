@@ -33,7 +33,7 @@ PersonalShema.findOne({Correo: req.body.correo}, (err, correoExiste) =>{
 }); 
 };
 
-exports.paquete = (req, res) => { 
+exports.paquete = (req, res) => {  // guardar un paquete que es para la poliza  
     if(!req.body.Tipo){res.status(400).send('ingrese el tipo')}
 
     const newPaquete = new paquete({
@@ -45,23 +45,27 @@ exports.paquete = (req, res) => {
     //poner alguna validaion 
 
     newPaquete.save((err, guardar) => {
-        if(err) res.send({msg: 'tenemos un problema al guardar los datos '+ err});        
+        if(err) res.send({msg: 'tenemos un problema al guardar los datos '+ err})
+        res.json({msg: 'Save Ok'})        
     })
 
 }
 
-exports.siniestro = (req, res) => { //id agente
-    if(!req.body.Siniestro){res.status(400).send('ingre los datos correctamente')};
+exports.siniestro = (req, res) => { //registar siniestro acontesido 
+    if(!req.body.siniestro){res.status(400).send('ingrese los datos correctamente')};
 
     const newSiniestro = new siniestro({
-        Agente: req.body.agente,
+        Agente: req.user.id,
         Siniestro: req.body.siniestro,
         Dato: req.body.dato,
-        resuelto: req.body.resuelto
+        Resuelto: req.body.resuelto
     });
 
     newSiniestro.save((err, guardar) => {
         if(err) res.send({msg: 'tenemos un problema al guardar los datos '+ err});
+        //res.send({msg: 'save susesful'})
+        else{res.json({msg: 'save Ok'})}
+        
     })
-}
+};
 

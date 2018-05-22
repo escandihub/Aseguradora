@@ -15,9 +15,9 @@ const passport = require('passport');
                 if(err){
                     next(err);            
                 }
-                //res.json( {msg:'login exitoso'});
+                res.json( {msg:'login exitoso'});
                 //res.render('/inicio', {usuario: req.user.Tipo});
-               res.redirect('menu');
+               //res.redirect('menu');
                //console.log(req.user);
                
                 

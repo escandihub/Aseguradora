@@ -1,4 +1,5 @@
 const bcrypt = require('bcrypt-nodejs');
+
 exports.encriptar = (Schema)  => {
     Schema.pre('save', function(next){
         const usuario = this;

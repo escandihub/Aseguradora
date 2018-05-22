@@ -7,8 +7,9 @@ module.exports = (app) => {
           app.get('/personal', (req, res) => {
             res.render('loginpersonal');
             })
-          app.post('/personal/registro', personal.estaAutenticado, side.isAdministrador, personalOperaciones.create);
-          app.post('/personal/paquete', personal.estaAutenticado, side.isAgente, personalOperaciones.paquete);
+          app.post('/personal/registro',  side.isAdministrador, personalOperaciones.create);
+          app.post('/personal/paquete',  side.isAgente, personalOperaciones.paquete);
+          app.post('/personal/siniestro', confiPassport.estaAutenticado, side.isAgente, personalOperaciones.siniestro);
 
           app.post('/personal/login', personal.Login);
 
