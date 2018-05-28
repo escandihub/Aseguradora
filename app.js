@@ -45,7 +45,7 @@ mongoose.connect(config.MONGO_URI)
         saveUninitialized: true
        }));
    app.use(bodyParser.json()); //parsear la informacion
-   app.use(bodyParser.urlencoded({ extended: true }));
+   app.use(bodyParser.urlencoded({ extended: false }));
    app.use(passport.initialize());
    app.use(passport.session());
    
@@ -53,46 +53,18 @@ mongoose.connect(config.MONGO_URI)
  * express.static es una función de middleware integrada para servir archivos estáticos.
  * Estamos diciendo que la carpeta pública del servidor express es el lugar para buscar los archivos estáticos
  */
-
-app.use(express.static('public'));
-app.set("view engine", "jade");
-
-app.get('/', (req, res) => {
-    res.render('index');
-})
-
+//vista por defecto 
+//app.set('views', path.join(__dirname, 'app'));
+//conectar node.js con Angular
+app.use(express.static(path.join(__dirname, 'dist')));
 require('./routes/usuario.route')(app);
 require('./routes/personal.login.route')(app);
-
-/**
- * Administrador subDominio
- */
-/*
-Admin.use(session({       
-    secret: 'secret cat',
-    resave: true,
-    saveUninitialized: true
-   }));
-
-Admin.use(bodyParser.json()); //parsear la informacion
-Admin.use(bodyParser.urlencoded({ extended: true }));
-Admin.use(passport.initialize());
-Admin.use(passport.session());
-
-Admin.use(express.static('public'));
-Admin.set("view engine", "jade");
-
-Admin.get('/personal', (req,res) => {
-    //res.send('hola ');
-    res.render('login');
-    console.log(req.body.password);
- });
-require('./routes/personal.login.route')(Admin);
-const port2 = 8082;
-Admin.listen(port2, () => {
-    console.log('Iniciando en el puerto: ' + port2);    
+app.get('*', (req, res) => {
+    res.sendfile(path.join(__dirname, 'dist/index.html'));
 });
-*/
+
+
+
 app.listen(port, () => {
     console.log('Iniciando en el puerto: ' + port);    
 });

@@ -1,0 +1,33 @@
+.auto img
+{
+  margin-left: auto;
+	margin-right: auto;
+  display: block;
+  height: 100px;
+
+}
+.auto{
+  height: auto; 
+}
+
+
+
+
+.container-fluid {
+  padding: 60px 50px;
+}
+
+
+
+
+
+.container-fluid
+{
+  display: flex;
+  justify-content: center;  
+  
+}
+
+p{
+  font-size: 20px;
+}

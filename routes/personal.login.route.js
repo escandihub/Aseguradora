@@ -4,8 +4,10 @@ module.exports = (app) => {
           side = require('../controllers/personal.tipo.controller');
           confiPassport = require('../Config/passportConfig');
 
-          app.get('/personal', (req, res) => {
-            res.render('loginpersonal');
+          app.get('/personal',confiPassport.estaAutenticado, side.isAgente,(req, res) => {
+            //res.render('loginpersonal');
+            //res.send({msg: 'soy en personal'});
+            res.json({tipo: req.user.Tipo })
             })
           app.post('/personal/registro',  side.isAdministrador, personalOperaciones.create);
           app.post('/personal/paquete',  side.isAgente, personalOperaciones.paquete);
@@ -17,7 +19,7 @@ module.exports = (app) => {
 
           app.get('/personal/menu', side.isAgente, (req, res) => {
                 //res.json(req.user);
-                res.render('dashboardAgente'/*, {usuario: req.user.Tipo}*/);
+              //  res.render('dashboardAgente'/*, {usuario: req.user.Tipo}*/);
                 //console.log(req.user);
                 
             });

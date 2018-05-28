@@ -1,0 +1,46 @@
+.auto img
+{
+  margin-left: auto;
+	margin-right: auto;
+  display: block;
+  height: 100px;
+
+}
+.auto{
+  height: auto;  
+}
+
+#perro{
+  margin-left: auto;
+	margin-right: auto;
+  display: block;
+  height: 100px;
+  width: 100px;
+}
+
+
+
+
+.container-fluid {
+  padding: 60px 50px;
+}
+
+
+
+
+
+.container-fluid
+{
+  display: flex;
+  justify-content: center;  
+  
+}
+
+p{
+  font-size: 20px;
+}
+
+.auto img{
+  height: auto;
+  width: auto;
+}

@@ -1,0 +1,17 @@
+//asi es como puedo personalizar mistemas 
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$primary : mat-palette($mat-teal);
+$accent : mat-palette($mat-yellow);
+
+$myTheme : mat-light-theme($primary, $accent);
+
+@include angular-material-theme($myTheme);
+
+/* estilo para especificos componentes 
+@include mat-core-theme($candy-app-theme);
+@include mat-button-theme($candy-app-theme);
+@include mat-checkbox-theme($candy-app-theme);
+*/

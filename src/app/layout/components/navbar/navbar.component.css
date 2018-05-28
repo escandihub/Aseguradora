@@ -1,0 +1,21 @@
+.navbar-custom {
+    background-color: white;
+    opacity: .9;
+}
+.navbar-custom ul li a{
+    color:black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;..");
+  }
+.navbar-toggler {
+    /*border-color:black;*/
+}
+.navbar-toggler-icon img{
+    height: 100%;
+    width: 100%;
+}
+.container{
+width:85%;
+}

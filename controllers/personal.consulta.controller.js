@@ -5,3 +5,4 @@ siniestro = require('../Models/Siniestro.model');
 exports.siniestro = (req, res) => {
     siniestro.findOne()
 }
+

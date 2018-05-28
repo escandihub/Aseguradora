@@ -63,7 +63,11 @@ exports.Login = (req, res, next) => {
                 next(err);            
             }
             //res.json( {msg:'login exitoso'});
-            res.redirect('inicio');
+            //res.redirect('inicio');
+            var user = this.usuario;
+            res.json({success: true, sesion: user});
+            console.log(user);
+            
         })
     })(req, res, next); //invocar el metodo que passport nos proporciona 
     //res.redirect('/inicio');
@@ -72,7 +76,6 @@ exports.Login = (req, res, next) => {
 
 exports.Logout = (req, res) => {
     req.logout();
-    //res.json({msg: 'adios vulve pronto'});
-    res.redirect('/');
+    res.json({msg: 'adios vulve pronto'});
 }
 
