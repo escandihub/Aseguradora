@@ -2,16 +2,16 @@
 
 Primero se descargan las dependencias
 
-verificar que exista node en el sistema
+# verificar que exista node en el sistema
 
 node -v
 
-una vez estando en el directorio raiz 
+# una vez estando en el directorio raiz 
 
 ejecutar
 $ npm install 
 
-lo siguente seria compilar el proyecto de angular con
+# lo siguente seria compilar el proyecto de angular con
 
 $ npm start 
 
