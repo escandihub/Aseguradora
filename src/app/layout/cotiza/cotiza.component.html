@@ -3,16 +3,16 @@
         <mat-card-title>Seleccione la marca de su auto</mat-card-title>
         <mat-card-content>
           <mat-form-field>
-            <mat-select placeholder="Auto" [(ngModel)]="name">
-              <mat-option *ngFor="let auto of autos" [value]="auto._id" (click)="onClick(auto._id)" (click)="onyear(auto._id)" >
+            <mat-select placeholder="Auto"  [(ngModel)]="name" >
+              <mat-option *ngFor="let auto of autos" [value]="auto.make" (click)="onClick(auto._id)" (click)="onyear(auto._id)" >
                 {{ auto.make }}
               </mat-option>              
-            </mat-select>            
+            </mat-select>                       
           </mat-form-field>
           <br>
           <mat-form-field>
-          <mat-select placeholder="Modelo" [(ngModel)]="model">
-              <mat-option *ngFor="let model of models" [value]="model._id">
+          <mat-select placeholder="Modelo" [(ngModel)]="modelo">
+              <mat-option *ngFor="let model of models" [value]="model.slug">
                   {{ model.model }}
                 </mat-option>
               </mat-select>
