@@ -17,8 +17,8 @@ export class CotizaComponent implements OnInit {
   years: any;
 
   animal: string;
-  name: string;
-  model:any;
+  name = "";
+  model = "";
 
 
 
@@ -60,9 +60,12 @@ export class CotizaComponent implements OnInit {
  
   //generar precio y posiblemente email
   cotiza(){
+    console.log(this.animal +  this.model);
+    
     let dialogRef = this.dialog.open(DialogOverview, {
       width: '350px',
       data: {name: this.name, model: this.model}
+      
     });
 
     dialogRef.afterClosed().subscribe(result => {
