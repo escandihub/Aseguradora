@@ -9,6 +9,7 @@ node -v
 # una vez estando en el directorio raiz 
 
 ejecutar
+
 $ npm install 
 
 # lo siguente seria compilar el proyecto de angular con
