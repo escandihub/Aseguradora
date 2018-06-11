@@ -57,6 +57,8 @@ package-lock.json
 
 # dependencies
 /node_modules
+*.zip
+*.rar
 
 # IDEs and editors
 /.idea
