@@ -16,7 +16,7 @@ $ npm install
 
 $ npm start 
 
-este comando ejecutara 2 comandos insternos necesarios para el proyecto. 
+este comando ejecutara 2 comandos internos necesarios para el proyecto. 
 
 acuden a su 
 localhost:8080
