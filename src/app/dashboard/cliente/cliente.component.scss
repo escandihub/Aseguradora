@@ -1,0 +1,62 @@
+//mantiene el tamaño del sidenav y del drawner
+.example-container {
+    position: absolute;
+    top: 60px;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+  }
+  
+ 
+ 
+ 
+  //mantiene el footer
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  //tamaño del sidebar
+  .prueba
+  {
+    width: 250px;
+    min-width: 250px;
+    min-height: 100%;
+    display: flex;    
+    //justify-content: center;
+    //padding-right: 10px;
+  }
+
+
+  
+//tamaño del card
+  .tam-card {
+    max-width: 100%;
+    min-height: 100%;
+    
+  }
+
+//Esconde flechas del input number
+
+//div del fromulario
+.example-container2 {
+  display: flex;
+  flex-direction: column;
+}
+
+//tamaño para los input
+.example-container2 > * {
+  width: 100%;
+}
+
+
+//Span extra para separar icono y las letras del side
+.flex2
+{
+    margin-right: 20px;
+}
+
+
+

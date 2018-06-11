@@ -65,15 +65,17 @@ import {BidiModule} from '@angular/cdk/bidi';
 //   AccordionLinkDirective,
 //   AccordionDirective} from './core';
 
-import { LayoutComponent } from './layout/layout.component'
+import { LayoutComponent } from './layout/layout.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutes } from './app.routing';
 import { AppComponent } from './app.component';
-import { ComponetesModule } from './componentes/componentes.module'
+//import { ComponetesModule } from './componentes/componentes.module'
 import {
     MenuComponent,
     AuthComponent,
     SidebarComponent
-} from './componentes'
+} from './componentes';
+//
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -93,19 +95,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AppComponent,
     AuthComponent,    
     MenuComponent,    
-    SidebarComponent,
-  
-    //MenuComponent
-    // HeaderComponent,
-    // SidebarComponent,
-    // NotificationComponent,
-    // OptionsComponent,
-    // MenuComponent,
-    // AdminLayoutComponent,
-    // AuthLayoutComponent,
-    // AccordionAnchorDirective,
-    // AccordionLinkDirective,
-    // AccordionDirective,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -171,7 +161,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MatNativeDateModule,
     HttpClientModule,
     FormsModule,
-    FlexLayoutModule,
+    FlexLayoutModule,  
     AgmCoreModule.forRoot({apiKey: 'YOURAPIKEY'}),
     PerfectScrollbarModule
   ],

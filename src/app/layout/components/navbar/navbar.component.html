@@ -1,48 +1,27 @@
-
-  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-  <div class="container">
-    <a class="navbar-brand" [routerLink]="['/inicio']"><img src="../../assets/img/logo.png" height="40px" width="40px"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"><img src="../../../../assets/img/navbar-toggler-icon.png"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="['/autos']">Autos <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/casa']">Casa</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/about']">Acerca de HDI</a>
-      </li>
-      <li class="nav-item">
-          
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Servicios
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" [routerLink]="['/siniestro']">Siniestro</a>          
-            <a class="dropdown-item" href="#">Pago de pólizas</a>                      
-            
-            <a class="dropdown-item" href="#">Cotizador</a>          
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Autos</a>
-            <a class="dropdown-item" href="#">Casa</a>
-        </div>
-      </li>
-      </ul>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/session/signin']">Ingreso cliente</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/casa']">Ingreso personal</a>
-        </li>
-      
-    </ul>    
-  </div>
-</div>
-</nav>
+<mat-toolbar class="main-header" color="primary">
+    <button (click)="toggleSidenav.emit()" mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="branding">
+      <div class="logo"></div>
+    </div>
+   
+    <button (click)="toggleNotificationSidenav.emit()" mat-icon-button class="ml-xs overflow-visible">
+      <mat-icon>notifications</mat-icon>
+      <span class="notification-label">5</span>
+    </button>
+    <button [matMenuTriggerFor]="user" mat-icon-button class="ml-xs">
+      <mat-icon>person</mat-icon>
+    </button>
+    <mat-menu #user="matMenu" x-position="before">      
+      <button mat-menu-item routerLink="/session/signin">
+        <mat-icon>account_circle</mat-icon>
+        Disable notifications
+      </button>
+      <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        Sign Out
+      </button>
+    </mat-menu>
+  </mat-toolbar>
+  

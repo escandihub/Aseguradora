@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+    <i class="flex"></i>
+    <button [matMenuTriggerFor]="user" mat-icon-button class="ml-xs">
+        <mat-icon>person</mat-icon>
+    </button>    
+      <mat-menu #user="matMenu" x-position="before">              
+        <button mat-menu-item>
+          <mat-icon>exit_to_app</mat-icon>
+          Sign Out
+        </button>
+      </mat-menu>          
+</mat-toolbar>
+
+

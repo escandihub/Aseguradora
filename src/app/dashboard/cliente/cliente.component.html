@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+<mat-drawer-container class="example-container">
+    
+        <mat-drawer mode="side" opened="true" class="prueba">
+            
+
+            <mat-nav-list style="width: 100%;">
+                <a mat-list-item>
+                  <mat-icon>create</mat-icon>  
+                  <span class="flex2"></span>
+                  <span>Inicio</span>
+                </a>
+                <a mat-list-item>
+                  <mat-icon>home</mat-icon>  
+                  <span class="flex2"></span>
+                  <span>Inicio</span>
+                </a>
+                <a mat-list-item>
+                  <mat-icon>home</mat-icon>  
+                  <span class="flex2"></span>
+                  <span>Inicio</span>
+                </a>
+              </mat-nav-list>
+
+
+
+
+
+        </mat-drawer>
+        <mat-drawer-content >   
+            <mat-card style="background-color: white;" class="tam-card">                        
+                <mat-toolbar>ll</mat-toolbar>                             
+                
+                        <mat-card-content>                    
+
+                          <router-outlet></router-outlet>
+                                                                         
+                </mat-card-content>          
+              
+              </mat-card>
+           
+    
+    
+          
+        </mat-drawer-content>        
+      </mat-drawer-container>
+      <mat-toolbar class="footer">Footer</mat-toolbar>
+    
+     
