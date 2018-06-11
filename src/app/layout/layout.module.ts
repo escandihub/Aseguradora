@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { LayoutRoutingModule } from './layout-routing.module';
@@ -37,11 +37,21 @@ import {
   MatSortModule,
   MatTooltipModule,
   MatStepperModule } from '@angular/material';
+<<<<<<< HEAD
+=======
+  import { FlexLayoutModule } from '@angular/flex-layout';
+  import { CotizaComponent } from './cotiza/cotiza.component';
+  import { DialogOverview  } from './cotiza/cotiza.component'
+>>>>>>> 4c841ccfceb773f11d0b289824c77c2787f31e72
 @NgModule({
   imports: [
     CommonModule,
     LayoutRoutingModule,
     MatSidenavModule,
+<<<<<<< HEAD
+=======
+    FlexLayoutModule,
+>>>>>>> 4c841ccfceb773f11d0b289824c77c2787f31e72
   MatMenuModule,
   MatIconModule,
   MatToolbarModule,
@@ -72,6 +82,8 @@ import {
   MatTooltipModule,
   MatStepperModule
   ],
-  declarations: [LayoutComponent, FooterComponent, NavbarComponent]
+  schemas: [ NO_ERRORS_SCHEMA ],
+  entryComponents: [DialogOverview, CotizaComponent],
+  declarations: [LayoutComponent, FooterComponent, NavbarComponent, CotizaComponent, DialogOverview]
 })
 export class LayoutModule { }

@@ -69,13 +69,21 @@ import { LayoutComponent } from './layout/layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutes } from './app.routing';
 import { AppComponent } from './app.component';
+<<<<<<< HEAD
 //import { ComponetesModule } from './componentes/componentes.module'
+=======
+//import  de los modulos de la carpeta componentes
+>>>>>>> 4c841ccfceb773f11d0b289824c77c2787f31e72
 import {
     MenuComponent,
     AuthComponent,
     SidebarComponent
 } from './componentes';
+<<<<<<< HEAD
 //
+=======
+//import  de los modulos de la carpeta layout
+>>>>>>> 4c841ccfceb773f11d0b289824c77c2787f31e72
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -95,7 +103,12 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AppComponent,
     AuthComponent,    
     MenuComponent,    
+<<<<<<< HEAD
     SidebarComponent
+=======
+    SidebarComponent,
+    //CotizaComponent  //cotizacion 
+>>>>>>> 4c841ccfceb773f11d0b289824c77c2787f31e72
   ],
   imports: [
     BrowserModule,

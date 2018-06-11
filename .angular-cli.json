@@ -19,7 +19,6 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "../node_modules/quill/dist/quill.snow.css",
         "../node_modules/quill/dist/quill.bubble.css",
         "../node_modules/dragula/dist/dragula.css",
@@ -34,8 +33,7 @@
       ],
       "scripts": [
         "../node_modules/hammerjs/hammer.min.js",
-        "../node_modules/chart.js/dist/Chart.bundle.min.js",
-        "../node_modules/bootstrap/dist/js/bootstrap.min.js"
+        "../node_modules/chart.js/dist/Chart.bundle.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

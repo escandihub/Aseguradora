@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout.component';
+import { CotizaComponent  } from './cotiza/cotiza.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,10 @@ const routes: Routes = [
       {path: 'siniestro', loadChildren:'./siniestro/siniestro.module#SiniestroModule'}
       //{path:'**', loadChildren:'not-found'}
     ]
-  }
+  },{
+    path: 'cotiza',
+    component: CotizaComponent
+  } 
 ];
 
 @NgModule({
