@@ -68,12 +68,13 @@ import {BidiModule} from '@angular/cdk/bidi';
 import { LayoutComponent } from './layout/layout.component'
 import { AppRoutes } from './app.routing';
 import { AppComponent } from './app.component';
-import { ComponetesModule } from './componentes/componentes.module'
+//import  de los modulos de la carpeta componentes
 import {
     MenuComponent,
     AuthComponent,
     SidebarComponent
-} from './componentes'
+} from './componentes';
+//import  de los modulos de la carpeta layout
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -94,18 +95,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AuthComponent,    
     MenuComponent,    
     SidebarComponent,
-  
-    //MenuComponent
-    // HeaderComponent,
-    // SidebarComponent,
-    // NotificationComponent,
-    // OptionsComponent,
-    // MenuComponent,
-    // AdminLayoutComponent,
-    // AuthLayoutComponent,
-    // AccordionAnchorDirective,
-    // AccordionLinkDirective,
-    // AccordionDirective,
+    //CotizaComponent  //cotizacion 
   ],
   imports: [
     BrowserModule,
