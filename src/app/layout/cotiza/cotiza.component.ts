@@ -1,9 +1,9 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, NgModule } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { log } from 'util';
+//import { log } from 'util';
 
 @Component({
   selector: 'app-cotiza',
@@ -16,15 +16,17 @@ export class CotizaComponent implements OnInit {
   models: any;
   years: any;
 
+  selectedValue: string;
   animal: string;
-  name: string;
-  model:any;
-
+  name = "";
+  modelo: string;
+  theme = "color4"
 
 
   constructor(private router: Router, private http: HttpClient, public dialog: MatDialog) { }
 
   ngOnInit() { // autos 
+    this.selectedValue = "";
 
     this.http.get('/cliente/auto').subscribe(dato => {
       this.autos = dato;  
@@ -45,6 +47,8 @@ export class CotizaComponent implements OnInit {
       
     })
 
+    this.backgroundChange();
+
   }
 
   onyear(event){ // subtraccion de los años de los autos
@@ -57,12 +61,19 @@ export class CotizaComponent implements OnInit {
 
     })
   }
+
+backgroundChange(){//aqui pondras sentencias para cambiar el color o imagen
+  if(this.name === "Audi"){ this.theme = "color2";}
+  else if(this.name === "Bentley"){this.theme = "color4";}
+}
  
   //generar precio y posiblemente email
   cotiza(){
+
     let dialogRef = this.dialog.open(DialogOverview, {
-      width: '350px',
-      data: {name: this.name, model: this.model}
+      width: '450px',
+      data: {name: this.name, model: this.modelo}
+      
     });
 
     dialogRef.afterClosed().subscribe(result => {

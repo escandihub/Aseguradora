@@ -3,6 +3,8 @@ import { Routes } from '@angular/router';
 //import { AdminLayoutComponent, AuthLayoutComponent } from './core';
 import { MenuComponent } from './componentes/menu/menu.component';  
 import { AuthComponent } from './componentes/auth/auth.component'
+import { LayoutComponent } from './layout/layout.component';
+
 
 export const AppRoutes: Routes = [
   
@@ -22,5 +24,5 @@ export const AppRoutes: Routes = [
     },{
       path: '**',
       redirectTo: 'session/404'
-    }
+    }    
   ];

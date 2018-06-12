@@ -94,7 +94,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AppComponent,
     AuthComponent,    
     MenuComponent,    
-    SidebarComponent,
+    SidebarComponent
     //CotizaComponent  //cotizacion 
   ],
   imports: [

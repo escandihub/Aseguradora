@@ -1,4 +1,5 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 import { LayoutRoutingModule } from './layout-routing.module';
@@ -42,6 +43,7 @@ import {
   import { DialogOverview  } from './cotiza/cotiza.component'
 @NgModule({
   imports: [
+    FormsModule,
     CommonModule,
     LayoutRoutingModule,
     MatSidenavModule,
