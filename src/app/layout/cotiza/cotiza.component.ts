@@ -20,6 +20,7 @@ export class CotizaComponent implements OnInit {
   animal: string;
   name = "";
   modelo: string;
+  theme = "color4"
 
 
   constructor(private router: Router, private http: HttpClient, public dialog: MatDialog) { }
@@ -46,6 +47,8 @@ export class CotizaComponent implements OnInit {
       
     })
 
+    this.backgroundChange();
+
   }
 
   onyear(event){ // subtraccion de los años de los autos
@@ -58,6 +61,11 @@ export class CotizaComponent implements OnInit {
 
     })
   }
+
+backgroundChange(){//aqui pondras sentencias para cambiar el color o imagen
+  if(this.name === "Audi"){ this.theme = "color2";}
+  else if(this.name === "Bentley"){this.theme = "color4";}
+}
  
   //generar precio y posiblemente email
   cotiza(){
