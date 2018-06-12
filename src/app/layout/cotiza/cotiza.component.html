@@ -23,7 +23,7 @@
           </mat-form-field>
          <br>
          <mat-form-field>
-                <mat-select placeholder="año">
+                <mat-select placeholder="año" [(ngModel)]="year" >
                      <mat-option *ngFor="let year of years" [value]="year._id">
                   {{ year.year}}
                 </mat-option>

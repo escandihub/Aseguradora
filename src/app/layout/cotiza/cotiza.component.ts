@@ -16,17 +16,17 @@ export class CotizaComponent implements OnInit {
   models: any;
   years: any;
 
-  selectedValue: string;
+  precio: number;
   animal: string;
   name = "";
   modelo: string;
+  year: number;
   theme = "color4"
 
 
   constructor(private router: Router, private http: HttpClient, public dialog: MatDialog) { }
 
   ngOnInit() { // autos 
-    this.selectedValue = "";
 
     this.http.get('/cliente/auto').subscribe(dato => {
       this.autos = dato;  
@@ -68,11 +68,17 @@ backgroundChange(){//aqui pondras sentencias para cambiar el color o imagen
 }
  
   //generar precio y posiblemente email
+
+  toPay(){
+    if(true){console.log(this.year);
+    return this.year;  
+    }
+  }
   cotiza(){
 
     let dialogRef = this.dialog.open(DialogOverview, {
       width: '450px',
-      data: {name: this.name, model: this.modelo}
+      data: {name: this.name, model: this.modelo, precio: this.toPay()}
       
     });
 
