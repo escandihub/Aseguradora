@@ -37,21 +37,15 @@ import {
   MatSortModule,
   MatTooltipModule,
   MatStepperModule } from '@angular/material';
-<<<<<<< HEAD
-=======
   import { FlexLayoutModule } from '@angular/flex-layout';
   import { CotizaComponent } from './cotiza/cotiza.component';
   import { DialogOverview  } from './cotiza/cotiza.component'
->>>>>>> 4c841ccfceb773f11d0b289824c77c2787f31e72
 @NgModule({
   imports: [
     CommonModule,
     LayoutRoutingModule,
     MatSidenavModule,
-<<<<<<< HEAD
-=======
     FlexLayoutModule,
->>>>>>> 4c841ccfceb773f11d0b289824c77c2787f31e72
   MatMenuModule,
   MatIconModule,
   MatToolbarModule,

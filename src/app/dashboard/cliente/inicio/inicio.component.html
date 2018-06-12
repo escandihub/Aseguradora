@@ -1,1 +1,129 @@
-ks
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+      <mat-card class="card-widget mat-teal">
+        <div mat-card-widget>
+          <div mat-card-float-icon>
+            <mat-icon>book</mat-icon>
+          </div>
+          <div class="pl-0">
+            <h2 mat-card-widget-title>103</h2>
+            <p>Cantidad de pólizas contratadas</p>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="100">
+      <mat-card class="card-widget mat-purple">
+        <div mat-card-widget>
+          <div mat-card-float-icon>
+            <mat-icon>phone</mat-icon>
+          </div>
+          <div class="pl-0">
+            <h2 mat-card-widget-title>961-12-13-345</h2>
+            <p>Número de la empresa</p>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+   </div>
+   
+  
+  <div fxLayout="row wrap">
+      <div fxFlex.gt-sm="33.33%" fxFlex="100">
+          <mat-card>
+        <mat-card-subtitle fxLayout="row" fxLayoutAlign="start center">
+          Datos personales &nbsp; <mat-icon>account_circle</mat-icon>
+          <span fxFlex></span>
+          <button mat-icon-button mat-button-sm [matMenuTriggerFor]="card1" aria-label="Open card menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+        </mat-card-subtitle>
+        <mat-menu #card1="matMenu" x-position="before">
+          <button mat-menu-item>
+            <mat-icon>settings</mat-icon>
+            Settings
+          </button>
+          <button mat-menu-item>
+            <mat-icon>more</mat-icon>
+            View More
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            Disable notifications
+          </button>
+          <button mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon>
+            Remove Panel
+          </button>
+        </mat-menu>
+              <mat-card-content>
+         
+        </mat-card-content>
+          </mat-card>
+      </div>
+      <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="50" fxFlex="100">
+          <mat-card>
+        <mat-card-subtitle fxLayout="row" fxLayoutAlign="start center">
+          Yearly Sales &nbsp; <span class="font-weight-bold mat-text-warn">-46,68</span>
+          <span fxFlex></span>
+          <button mat-icon-button mat-button-sm [matMenuTriggerFor]="card2" aria-label="Open card menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+        </mat-card-subtitle>
+        <mat-menu #card2="matMenu" x-position="before">
+          <button mat-menu-item>
+            <mat-icon>settings</mat-icon>
+            Settings
+          </button>
+          <button mat-menu-item>
+            <mat-icon>more</mat-icon>
+            View More
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            Disable notifications
+          </button>
+          <button mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon>
+            Remove Panel
+          </button>
+        </mat-menu>
+              <mat-card-content>
+         
+        </mat-card-content>
+          </mat-card>
+      </div>
+      <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="50" fxFlex="100">
+          <mat-card>
+        <mat-card-subtitle fxLayout="row" fxLayoutAlign="start center">
+          Sales Report &nbsp; <span class="font-weight-bold mat-text-accent">+2,50%</span>
+          <span fxFlex></span>
+          <button mat-icon-button mat-button-sm [matMenuTriggerFor]="card3" aria-label="Open card menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+        </mat-card-subtitle>
+        <mat-menu #card3="matMenu" x-position="before">
+          <button mat-menu-item>
+            <mat-icon>settings</mat-icon>
+            Settings
+          </button>
+          <button mat-menu-item>
+            <mat-icon>more</mat-icon>
+            View More
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            Disable notifications
+          </button>
+          <button mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon>
+            Remove Panel
+          </button>
+        </mat-menu>
+              <mat-card-content>
+         
+        </mat-card-content>
+          </mat-card>
+      </div>
+  </div>
+  

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { ClienteRoutingModule } from './cliente-routing.module';
 import {ClienteComponent} from './cliente.component';
@@ -44,14 +45,13 @@ import {
   MatStepperModule } from '@angular/material';
 
 
-
 @NgModule({
   imports: [
     CommonModule,
     FlexLayoutModule,
     ClienteRoutingModule,
     FormsModule, ReactiveFormsModule,
-
+    RouterModule,
     MatInputModule,
     MatSidenavModule,
     MatMenuModule,

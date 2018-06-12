@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { InicioRoutingModule } from './inicio-routing.module';
-import {InicioComponent} from './inicio.component';
+import {MensajeComponent} from './mensaje.component';
+import { MensajeRoutingModule } from './mensaje-routing.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {
   MatInputModule,
   MatSidenavModule,
@@ -37,17 +35,11 @@ import {
   MatSortModule,
   MatTooltipModule,
   MatStepperModule } from '@angular/material';
+
 @NgModule({
   imports: [
-    CommonModule,
-    InicioRoutingModule,
-
-
-
 
     FlexLayoutModule,
-    FormsModule, ReactiveFormsModule,
-
     MatInputModule,
     MatSidenavModule,
     MatMenuModule,
@@ -79,7 +71,10 @@ import {
     MatSortModule,
     MatTooltipModule,
     MatStepperModule,
+
+    CommonModule,
+    MensajeRoutingModule
   ],
-  declarations: [InicioComponent]
+  declarations: [MensajeComponent]
 })
-export class InicioModule { }
+export class MensajeModule { }

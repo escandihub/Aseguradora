@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {PolizasComponent} from './polizas.component';
+import { PolizasRoutingModule } from './polizas-routing.module';
 
-import { InicioRoutingModule } from './inicio-routing.module';
-import {InicioComponent} from './inicio.component';
-import {FlexLayoutModule} from '@angular/flex-layout';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {
-  MatInputModule,
+import {  
   MatSidenavModule,
   MatMenuModule,
   MatIconModule,
@@ -40,15 +37,11 @@ import {
 @NgModule({
   imports: [
     CommonModule,
-    InicioRoutingModule,
+    PolizasRoutingModule,
 
 
+   
 
-
-    FlexLayoutModule,
-    FormsModule, ReactiveFormsModule,
-
-    MatInputModule,
     MatSidenavModule,
     MatMenuModule,
     MatIconModule,
@@ -78,8 +71,8 @@ import {
     MatSnackBarModule,
     MatSortModule,
     MatTooltipModule,
-    MatStepperModule,
+    MatStepperModule
   ],
-  declarations: [InicioComponent]
+  declarations: [PolizasComponent]
 })
-export class InicioModule { }
+export class PolizasModule { }
