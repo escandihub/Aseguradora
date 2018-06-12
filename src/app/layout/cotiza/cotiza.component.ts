@@ -70,10 +70,12 @@ backgroundChange(){//aqui pondras sentencias para cambiar el color o imagen
   //generar precio y posiblemente email
 
   toPay(){
-    if(true){console.log(this.year);
-    return this.year;  
-    }
+    if(this.year < 2000){return 1500;}
+    else if(this.year >=  2000 && this.year < 2005 ){ return 2500; }
+    else if(this.year  >= 2005 && this.year < 2012){ return 2700; }
+    else if(this.year >= 2012 && this.year < 2018){ return 3000;}
   }
+  
   cotiza(){
 
     let dialogRef = this.dialog.open(DialogOverview, {
