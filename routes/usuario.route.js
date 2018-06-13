@@ -21,9 +21,9 @@
     })
     app.get('/servicio/poliza', confiPassport.estaAutenticado, Operacion.poliza);
 
-    app.get('/cliente/autos', autos.insert);
-    app.get('/cliente/models', autos.modelos);
-    app.get('/cliente/years', autos.years);
+    // app.get('/cliente/autos', autos.insert);
+    // app.get('/cliente/models', autos.modelos);
+    // app.get('/cliente/years', autos.years);
 
     //consulta de la cotizacon 
     app.get('/cliente/auto', autos.consulta);

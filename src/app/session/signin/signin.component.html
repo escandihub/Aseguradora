@@ -29,9 +29,9 @@
                 <small  *ngIf="message !== ''" mat-text-warn >{{message}}</small>
               </div>
               <div class="pb-1">
-                <mat-checkbox>Stay logged in</mat-checkbox>
+                <!-- <mat-checkbox>Stay logged in</mat-checkbox> -->
               </div>
-              <button mat-raised-button color="primary" type="submit" [routerLink]="['/dashboard/cliente']" >Login</button>
+              <button [disabled]="!form.valid" mat-raised-button color="primary" type="submit" [routerLink]="['/dashboard/cliente']" >Login</button>
               <!--[disabled]="!form.valid"-->
             </div>
             <div class="pt-1 pb-1 text-xs-center">

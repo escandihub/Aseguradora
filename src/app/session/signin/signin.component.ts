@@ -30,7 +30,7 @@ export class SigninComponent implements OnInit {
     this.http.post('/cliente/login', this.loginData).subscribe(resp => {
       this.data = resp;
       localStorage.setItem('cliente', this.data.user);
-      this.router.navigate(['']);
+      this.router.navigate(['/dashboard/cliente']);
     }, err => {
       this.message = err.error.msg;
     })
