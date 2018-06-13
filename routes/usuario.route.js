@@ -17,9 +17,11 @@
 
     app.get('/cliente/inicio', confiPassport.estaAutenticado, (req, res) => {
         //res.render('dashboardCliente', {usuario: req.user.nombre});
-        res.json({msg: req.user});
+        res.json(req.user);
     })
-    app.get('/servicio/poliza', confiPassport.estaAutenticado, Operacion.poliza);
+    app.post('/servicio/poliza', confiPassport.estaAutenticado, Operacion.poliza);
+    app.get('/servicio/polizadelete', confiPassport.estaAutenticado, Operacion.eliminar);
+    app.get('/servicio/ver', confiPassport.estaAutenticado, Operacion.ver);
 
     // app.get('/cliente/autos', autos.insert);
     // app.get('/cliente/models', autos.modelos);
@@ -29,5 +31,6 @@
     app.get('/cliente/auto', autos.consulta);
     app.get('/cliente/auto/:id', autos.getModel);
     app.get('/cliente/model/:idmodel', autos.getYear);
+
 
 }

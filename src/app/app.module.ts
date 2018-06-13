@@ -74,6 +74,7 @@ import {
     AuthComponent,
     SidebarComponent
 } from './componentes';
+import { PolizaComponent } from './dashboard/poliza/poliza.component';
 //import  de los modulos de la carpeta layout
 
 
@@ -94,7 +95,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AppComponent,
     AuthComponent,    
     MenuComponent,    
-    SidebarComponent
+    SidebarComponent, PolizaComponent
     //CotizaComponent  //cotizacion 
   ],
   imports: [
