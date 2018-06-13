@@ -51,24 +51,24 @@ exports.create = (req, res) => {
 
 exports.Login = (req, res, next) => {
     passport.authenticate('cliente', (err, usuario, info) => {
-        console.log(info);        
+      //  console.log(info);        
         if(err){
             next(err);
         }        
         if(!usuario){            
-            return res.status(401).send({success: false, msg: 'correo o contraseña incorrecto'})
+            return res.status(401).send({success: false, msg: 'correo o contraseña incorrecto'});
         }
         req.logIn(usuario, (err) => {
             if(err){
-                next(err);            
+                //next(err);            
+                return res.status(401).send({success: false, msg: 'correo o contraseña incorrecto 2'});
             }
             //res.json( {msg:'login exitoso'});
             //res.redirect('inicio');
             var user = this.usuario;
-            res.json({success: true, sesion: user});
-            console.log(user);
-            
+            res.json({success: true, sesion: user});            
         })
+
     })(req, res, next); //invocar el metodo que passport nos proporciona 
     //res.redirect('/inicio');
 }

@@ -29,11 +29,11 @@ export class SigninComponent implements OnInit {
     //this.router.navigate ( [ '/dashboard' ] );
     this.http.post('/cliente/login', this.loginData).subscribe(resp => {
       this.data = resp;
-      localStorage.setItem('cliente', this.data.user);
+      localStorage.setItem('cliente', this.data.sesion);
       this.router.navigate(['/dashboard/cliente']);
     }, err => {
-      this.message = err.error.msg;
-    })
+      this.message = err.resp.msg;
+    });
   }
 
 }

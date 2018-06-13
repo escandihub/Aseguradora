@@ -14,6 +14,7 @@
               <img id="peque" src="assets/img/logo.png" alt=""/>
               <p class="mat-text-muted">Inicio de sesion</p>
             </div>
+            <small  *ngIf="message !== ''" role="alert" mat-text-warn >{{message}}</small>
             <div fxLayout="column" fxLayoutAlign="space-around">
               <div class="pb-1">
                 <mat-form-field style="width: 100%">
@@ -25,19 +26,16 @@
                 <mat-form-field style="width: 100%">
                   <input matInput type="password" placeholder="Contraseña" name="password" [formControl]="form.controls['password']" [(ngModel)]="loginData.password">
                 </mat-form-field>
-                <small *ngIf="form.controls['password'].hasError('required') && form.controls['password'].touched" class="mat-text-warn">Se requiere la constraseña</small>
-                <small  *ngIf="message !== ''" mat-text-warn >{{message}}</small>
-              </div>
-              <div class="pb-1">
-                <!-- <mat-checkbox>Stay logged in</mat-checkbox> -->
+                <small *ngIf="form.controls['password'].hasError('required') && form.controls['password'].touched" class="mat-text-warn">Se requiere la constraseña</small>                
               </div>
               <button [disabled]="!form.valid" mat-raised-button color="primary" type="submit" [routerLink]="['/dashboard/cliente']" >Login</button>
               <!--[disabled]="!form.valid"-->
             </div>
+            <!---
             <div class="pt-1 pb-1 text-xs-center">
-             <!-- <a [routerLink]="['/session/forgot']">Forgot password?</a>&nbsp;&nbsp;&nbsp;&nbsp; -->
-             <!-- <a [routerLink]="['/session/signup']">Sign up for a new account.</a> -->
-            </div>
+              <a [routerLink]="['/session/forgot']">Forgot password?</a>&nbsp;&nbsp;&nbsp;&nbsp;
+              <a [routerLink]="['/session/signup']">Sign up for a new account.</a> 
+            </div> -->
           </form>
         </mat-card-content>
       </mat-card>
