@@ -1,0 +1,15 @@
+{
+  "name": "Aseguradora",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
