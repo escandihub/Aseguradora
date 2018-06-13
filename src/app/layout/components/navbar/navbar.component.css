@@ -27,3 +27,15 @@ width:85%;
 {
     padding-left: 0;
 }
+.flex
+{
+    flex: 1 1 auto;
+}
+.separador
+{
+    margin-right: 30px;
+}
+.separador2
+{
+    margin-right: 50px;
+}

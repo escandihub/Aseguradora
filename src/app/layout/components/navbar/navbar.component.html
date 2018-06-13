@@ -3,24 +3,43 @@
       <mat-icon>menu</mat-icon>
     </button>
     <div class="branding">
-      <div class="logo"></div>
+      <div class="logo"></div>      
     </div>
-   
-    <button (click)="toggleNotificationSidenav.emit()" mat-icon-button class="ml-xs overflow-visible">
-      <mat-icon>notifications</mat-icon>
-      <span class="notification-label">5</span>
+    <mat-icon>home</mat-icon>
+    <span class="separador"></span>
+    <button mat-icon-button [routerLink]="['/casa']">
+      Casa      
     </button>
+    <span class="separador"></span>
+    <button mat-icon-button [routerLink]="['/autos']">
+      Autos      
+    </button>
+    <span class="separador"></span>
+    <button mat-icon-button [routerLink]="['/about']">
+      Acerca de HDI      
+    </button>
+    <span class="separador2"></span>        
+    <button mat-button [matMenuTriggerFor]="menu">Servicios</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="['/siniestro']">Siniestros</button>
+      <button mat-menu-item [routerLink]="['/contacto']">Contáctanos</button>
+      <button mat-menu-item [routerLink]="['/cotiza']">Cotizador de autos</button>      
+
+    </mat-menu>
+
+   <span class="flex"></span>
+
     <button [matMenuTriggerFor]="user" mat-icon-button class="ml-xs">
       <mat-icon>person</mat-icon>
     </button>
     <mat-menu #user="matMenu" x-position="before">      
       <button mat-menu-item routerLink="/session/signin">
         <mat-icon>account_circle</mat-icon>
-        Disable notifications
+        Iniciar sesión como cliente
       </button>
-      <button mat-menu-item>
-        <mat-icon>exit_to_app</mat-icon>
-        Sign Out
+      <button mat-menu-item routerLink="/session/signin">
+        <mat-icon>account_circle</mat-icon>
+        Iniciar sesión como personal
       </button>
     </mat-menu>
   </mat-toolbar>

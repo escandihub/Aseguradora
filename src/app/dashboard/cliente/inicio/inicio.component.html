@@ -35,27 +35,10 @@
           Datos personales &nbsp; <mat-icon>account_circle</mat-icon>
           <span fxFlex></span>
           <button mat-icon-button mat-button-sm [matMenuTriggerFor]="card1" aria-label="Open card menu">
-            <mat-icon>more_vert</mat-icon>
+            <span style="color:blue">Editar</span>
           </button>
         </mat-card-subtitle>
-        <mat-menu #card1="matMenu" x-position="before">
-          <button mat-menu-item>
-            <mat-icon>settings</mat-icon>
-            Settings
-          </button>
-          <button mat-menu-item>
-            <mat-icon>more</mat-icon>
-            View More
-          </button>
-          <button mat-menu-item>
-            <mat-icon>notifications_off</mat-icon>
-            Disable notifications
-          </button>
-          <button mat-menu-item>
-            <mat-icon>exit_to_app</mat-icon>
-            Remove Panel
-          </button>
-        </mat-menu>
+        
               <mat-card-content>
          
         </mat-card-content>

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {PolizasComponent} from './polizas.component';
 import { PolizasRoutingModule } from './polizas-routing.module';
-
+import {FlexLayoutModule} from '@angular/flex-layout';
 import {  
   MatSidenavModule,
   MatMenuModule,
@@ -39,7 +39,7 @@ import {
     CommonModule,
     PolizasRoutingModule,
 
-
+    FlexLayoutModule,
    
 
     MatSidenavModule,

@@ -13,7 +13,7 @@ const routes: Routes = [
       {path: 'autos', loadChildren:'./autos/autos.module#AutosModule'},
       {path: 'casa', loadChildren:'./casa/casa.module#CasaModule'},
       {path: 'about', loadChildren:'./about/about.module#AboutModule'},
-      //{path: 'hdi_contigo', loadChildren:'./hdicontigo/hdicontigo.module#HdicontigoModule'},                
+      {path: 'contacto', loadChildren:'./hdicontigo/hdicontigo.module#HdicontigoModule'},                
       {path: 'siniestro', loadChildren:'./siniestro/siniestro.module#SiniestroModule'}
       //{path:'**', loadChildren:'not-found'}
     ]
