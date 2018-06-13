@@ -14,9 +14,14 @@ $ npm install
 
 # lo siguente seria compilar el proyecto de angular con
 
-$ npm start 
-
+ npm start 
+ 
 este comando ejecutara 2 comandos internos necesarios para el proyecto. 
 
+si es la primera vez con un proyecto de angular utilizar 
+ npm install -g @angular/cli
+
 acuden a su 
-localhost:8080
+localhost:8080/
+
+y tu padilla a localhost:8080/cotiza para que sepas los autos 
